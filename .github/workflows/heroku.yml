@@ -72,7 +72,7 @@ jobs:
         echo "  password $HEROKU_API_KEY" >> ~/.netrc
         cat ~/.netrc
         
-# vault kv get -address="https://vault.sirpi.co.in" -field=env kv/projects/herokutest > .env
+         vault kv get -address="https://vault.sirpi.co.in" -field=env kv/projects/herokutest > .env
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
